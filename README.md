@@ -1,7 +1,16 @@
 ---
 inference: false
-license: other
+language:
+- en
+pipeline_tag: text-generation
+tags:
+- facebook
+- meta
+- pytorch
+- llama
+- llama-2
 model_type: llama
+license: other
 ---
 
 <!-- header start -->
@@ -138,27 +147,6 @@ Thank you to all my generous patrons and donaters!
 
 # Original model card: Meta's Llama 2 13B
 
----
-extra_gated_heading: Access Llama 2 on Hugging Face
-extra_gated_description: >-
-  This is a form to enable access to Llama 2 on Hugging Face after you have been
-  granted access from Meta. Please visit the [Meta website](https://ai.meta.com/resources/models-and-libraries/llama-downloads) and accept our
-  license terms and acceptable use policy before submitting this form. Requests
-  will be processed in 1-2 days.
-extra_gated_button_content: Submit
-extra_gated_fields:
-  I agree to share my name, email address and username with Meta and confirm that I have already been granted download access on the Meta website: checkbox
-language:
-- en
-pipeline_tag: text-generation
-inference: false
-tags:
-- facebook
-- meta
-- pytorch
-- llama
-- llama-2
----
 # **Llama 2**
 Llama 2 is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 70 billion parameters. This is the repository for the 13B pretrained model, converted for the Hugging Face Transformers format. Links to other models can be found in the index at the bottom.
 
