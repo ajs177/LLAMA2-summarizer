@@ -2,67 +2,85 @@
 inference: false
 language:
 - en
+license: llama2
+model_creator: Meta
+model_link: https://huggingface.co/meta-llama/Llama-2-13b-hf
+model_name: Llama 2 13B
+model_type: llama
 pipeline_tag: text-generation
+quantized_by: TheBloke
 tags:
 - facebook
 - meta
 - pytorch
 - llama
 - llama-2
-model_type: llama
-license: other
 ---
 
 <!-- header start -->
-<div style="width: 100%;">
-    <img src="https://i.imgur.com/EBdldam.jpg" alt="TheBlokeAI" style="width: 100%; min-width: 400px; display: block; margin: auto;">
+<!-- 200823 -->
+<div style="width: auto; margin-left: auto; margin-right: auto">
+<img src="https://i.imgur.com/EBdldam.jpg" alt="TheBlokeAI" style="width: 100%; min-width: 400px; display: block; margin: auto;">
 </div>
 <div style="display: flex; justify-content: space-between; width: 100%;">
     <div style="display: flex; flex-direction: column; align-items: flex-start;">
-        <p><a href="https://discord.gg/theblokeai">Chat & support: my new Discord server</a></p>
+        <p style="margin-top: 0.5em; margin-bottom: 0em;"><a href="https://discord.gg/theblokeai">Chat & support: TheBloke's Discord server</a></p>
     </div>
     <div style="display: flex; flex-direction: column; align-items: flex-end;">
-        <p><a href="https://www.patreon.com/TheBlokeAI">Want to contribute? TheBloke's Patreon page</a></p>
+        <p style="margin-top: 0.5em; margin-bottom: 0em;"><a href="https://www.patreon.com/TheBlokeAI">Want to contribute? TheBloke's Patreon page</a></p>
     </div>
 </div>
+<div style="text-align:center; margin-top: 0em; margin-bottom: 0em"><p style="margin-top: 0.25em; margin-bottom: 0em;">TheBloke's LLM work is generously supported by a grant from <a href="https://a16z.com">andreessen horowitz (a16z)</a></p></div>
+<hr style="margin-top: 1.0em; margin-bottom: 1.0em;">
 <!-- header end -->
 
-# Meta's Llama 2 13B GGML
+# Llama 2 13B - GGML
+- Model creator: [Meta](https://huggingface.co/meta-llama)
+- Original model: [Llama 2 13B](https://huggingface.co/meta-llama/Llama-2-13b-hf)
 
-These files are GGML format model files for [Meta's Llama 2 13B](https://huggingface.co/meta-llama/Llama-2-13b-hf).
+## Description
+
+This repo contains GGML format model files for [Meta's Llama 2 13B](https://huggingface.co/meta-llama/Llama-2-13b-hf).
+
+### Important note regarding GGML files.
+
+The GGML format has now been superseded by GGUF. As of August 21st 2023, [llama.cpp](https://github.com/ggerganov/llama.cpp) no longer supports GGML models. Third party clients and libraries are expected to still support it for a time, but many may also drop support.
+
+Please use the GGUF models instead.
+### About GGML
 
 GGML files are for CPU + GPU inference using [llama.cpp](https://github.com/ggerganov/llama.cpp) and libraries and UIs which support this format, such as:
-* [KoboldCpp](https://github.com/LostRuins/koboldcpp), a powerful GGML web UI with full GPU acceleration out of the box. Especially good for story telling.
-* [LoLLMS Web UI](https://github.com/ParisNeo/lollms-webui), a great web UI with GPU acceleration via the c_transformers backend.
-* [LM Studio](https://lmstudio.ai/), a fully featured local GUI. Supports full GPU accel on macOS. Also supports Windows, without GPU accel.
-* [text-generation-webui](https://github.com/oobabooga/text-generation-webui), the most popular web UI. Requires extra steps to enable GPU accel via llama.cpp backend.
-* [ctransformers](https://github.com/marella/ctransformers), a Python library with LangChain support and OpenAI-compatible AI server.
-* [llama-cpp-python](https://github.com/abetlen/llama-cpp-python), a Python library with OpenAI-compatible API server.
+* [text-generation-webui](https://github.com/oobabooga/text-generation-webui), the most popular web UI. Supports NVidia CUDA GPU acceleration.
+* [KoboldCpp](https://github.com/LostRuins/koboldcpp), a powerful GGML web UI with GPU acceleration on all platforms (CUDA and OpenCL). Especially good for story telling.
+* [LM Studio](https://lmstudio.ai/), a fully featured local GUI with GPU acceleration on both Windows (NVidia and AMD), and macOS.
+* [LoLLMS Web UI](https://github.com/ParisNeo/lollms-webui), a great web UI with CUDA GPU acceleration via the c_transformers backend.
+* [ctransformers](https://github.com/marella/ctransformers), a Python library with GPU accel, LangChain support, and OpenAI-compatible AI server.
+* [llama-cpp-python](https://github.com/abetlen/llama-cpp-python), a Python library with GPU accel, LangChain support, and OpenAI-compatible API server.
 
 ## Repositories available
 
 * [GPTQ models for GPU inference, with multiple quantisation parameter options.](https://huggingface.co/TheBloke/Llama-2-13B-GPTQ)
-* [2, 3, 4, 5, 6 and 8-bit GGML models for CPU+GPU inference](https://huggingface.co/TheBloke/Llama-2-13B-GGML)
-* [Unquantised fp16 model in pytorch format, for GPU inference and for further conversions](https://huggingface.co/meta-llama/Llama-2-13b-hf)
+* [2, 3, 4, 5, 6 and 8-bit GGUF models for CPU+GPU inference](https://huggingface.co/TheBloke/Llama-2-13B-GGUF)
+* [2, 3, 4, 5, 6 and 8-bit GGML models for CPU+GPU inference (deprecated)](https://huggingface.co/TheBloke/Llama-2-13B-GGML)
+* [Meta's original unquantised fp16 model in pytorch format, for GPU inference and for further conversions](https://huggingface.co/meta-llama/Llama-2-13b-hf)
 
 ## Prompt template: None
 
 ```
 {prompt}
+
 ```
 
 <!-- compatibility_ggml start -->
 ## Compatibility
 
-### Original llama.cpp quant methods: `q4_0, q4_1, q5_0, q5_1, q8_0`
+These quantised GGML files are compatible with llama.cpp between June 6th (commit `2d43387`) and August 21st 2023.
 
-These are guaranteed to be compatible with any UIs, tools and libraries released since late May. They may be phased out soon, as they are largely superseded by the new k-quant methods.
+For support with latest llama.cpp, please use GGUF files instead.
 
-### New k-quant methods: `q2_K, q3_K_S, q3_K_M, q3_K_L, q4_K_S, q4_K_M, q5_K_S, q6_K`
+The final llama.cpp commit with support for GGML was: [dadbed99e65252d79f81101a392d0d6497b86caa](https://github.com/ggerganov/llama.cpp/commit/dadbed99e65252d79f81101a392d0d6497b86caa)
 
-These new quantisation methods are compatible with llama.cpp as of June 6th, commit `2d43387`.
-
-They are now also compatible with recent releases of text-generation-webui, KoboldCpp, llama-cpp-python, ctransformers, rustformers and most others. For compatibility with other tools and libraries, please check their documentation.
+As of August 23rd 2023 they are still compatible with all UIs, libraries and utilities which use GGML. This may change in the future.
 
 ## Explanation of the new k-quant methods
 <details>
@@ -81,43 +99,51 @@ Refer to the Provided Files table below to see what files use which methods, and
 <!-- compatibility_ggml end -->
 
 ## Provided files
+
 | Name | Quant method | Bits | Size | Max RAM required | Use case |
 | ---- | ---- | ---- | ---- | ---- | ----- |
-| llama-2-13b.ggmlv3.q2_K.bin | q2_K | 2 | 5.51 GB| 8.01 GB | New k-quant method. Uses GGML_TYPE_Q4_K for the attention.vw and feed_forward.w2 tensors, GGML_TYPE_Q2_K for the other tensors. |
-| llama-2-13b.ggmlv3.q3_K_L.bin | q3_K_L | 3 | 6.93 GB| 9.43 GB | New k-quant method. Uses GGML_TYPE_Q5_K for the attention.wv, attention.wo, and feed_forward.w2 tensors, else GGML_TYPE_Q3_K |
-| llama-2-13b.ggmlv3.q3_K_M.bin | q3_K_M | 3 | 6.31 GB| 8.81 GB | New k-quant method. Uses GGML_TYPE_Q4_K for the attention.wv, attention.wo, and feed_forward.w2 tensors, else GGML_TYPE_Q3_K |
-| llama-2-13b.ggmlv3.q3_K_S.bin | q3_K_S | 3 | 5.66 GB| 8.16 GB | New k-quant method. Uses GGML_TYPE_Q3_K for all tensors |
-| llama-2-13b.ggmlv3.q4_0.bin | q4_0 | 4 | 7.32 GB| 9.82 GB | Original quant method, 4-bit. |
-| llama-2-13b.ggmlv3.q4_1.bin | q4_1 | 4 | 8.14 GB| 10.64 GB | Original quant method, 4-bit. Higher accuracy than q4_0 but not as high as q5_0. However has quicker inference than q5 models. |
-| llama-2-13b.ggmlv3.q4_K_M.bin | q4_K_M | 4 | 7.87 GB| 10.37 GB | New k-quant method. Uses GGML_TYPE_Q6_K for half of the attention.wv and feed_forward.w2 tensors, else GGML_TYPE_Q4_K |
-| llama-2-13b.ggmlv3.q4_K_S.bin | q4_K_S | 4 | 7.37 GB| 9.87 GB | New k-quant method. Uses GGML_TYPE_Q4_K for all tensors |
-| llama-2-13b.ggmlv3.q5_0.bin | q5_0 | 5 | 8.95 GB| 11.45 GB | Original quant method, 5-bit. Higher accuracy, higher resource usage and slower inference. |
-| llama-2-13b.ggmlv3.q5_1.bin | q5_1 | 5 | 9.76 GB| 12.26 GB | Original quant method, 5-bit. Even higher accuracy, resource usage and slower inference. |
-| llama-2-13b.ggmlv3.q5_K_M.bin | q5_K_M | 5 | 9.23 GB| 11.73 GB | New k-quant method. Uses GGML_TYPE_Q6_K for half of the attention.wv and feed_forward.w2 tensors, else GGML_TYPE_Q5_K |
-| llama-2-13b.ggmlv3.q5_K_S.bin | q5_K_S | 5 | 8.97 GB| 11.47 GB | New k-quant method. Uses GGML_TYPE_Q5_K for all tensors |
-| llama-2-13b.ggmlv3.q6_K.bin | q6_K | 6 | 10.68 GB| 13.18 GB | New k-quant method. Uses GGML_TYPE_Q8_K for all tensors - 6-bit quantization |
-| llama-2-13b.ggmlv3.q8_0.bin | q8_0 | 8 | 13.83 GB| 16.33 GB | Original quant method, 8-bit. Almost indistinguishable from float16. High resource use and slow. Not recommended for most users. |
+| [llama-2-13b.ggmlv3.q2_K.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q2_K.bin) | q2_K | 2 | 5.51 GB| 8.01 GB | New k-quant method. Uses GGML_TYPE_Q4_K for the attention.vw and feed_forward.w2 tensors, GGML_TYPE_Q2_K for the other tensors. |
+| [llama-2-13b.ggmlv3.q3_K_S.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q3_K_S.bin) | q3_K_S | 3 | 5.66 GB| 8.16 GB | New k-quant method. Uses GGML_TYPE_Q3_K for all tensors |
+| [llama-2-13b.ggmlv3.q3_K_M.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q3_K_M.bin) | q3_K_M | 3 | 6.31 GB| 8.81 GB | New k-quant method. Uses GGML_TYPE_Q4_K for the attention.wv, attention.wo, and feed_forward.w2 tensors, else GGML_TYPE_Q3_K |
+| [llama-2-13b.ggmlv3.q3_K_L.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q3_K_L.bin) | q3_K_L | 3 | 6.93 GB| 9.43 GB | New k-quant method. Uses GGML_TYPE_Q5_K for the attention.wv, attention.wo, and feed_forward.w2 tensors, else GGML_TYPE_Q3_K |
+| [llama-2-13b.ggmlv3.q4_0.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q4_0.bin) | q4_0 | 4 | 7.32 GB| 9.82 GB | Original quant method, 4-bit. |
+| [llama-2-13b.ggmlv3.q4_K_S.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q4_K_S.bin) | q4_K_S | 4 | 7.37 GB| 9.87 GB | New k-quant method. Uses GGML_TYPE_Q4_K for all tensors |
+| [llama-2-13b.ggmlv3.q4_K_M.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q4_K_M.bin) | q4_K_M | 4 | 7.87 GB| 10.37 GB | New k-quant method. Uses GGML_TYPE_Q6_K for half of the attention.wv and feed_forward.w2 tensors, else GGML_TYPE_Q4_K |
+| [llama-2-13b.ggmlv3.q4_1.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q4_1.bin) | q4_1 | 4 | 8.14 GB| 10.64 GB | Original quant method, 4-bit. Higher accuracy than q4_0 but not as high as q5_0. However has quicker inference than q5 models. |
+| [llama-2-13b.ggmlv3.q5_0.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q5_0.bin) | q5_0 | 5 | 8.95 GB| 11.45 GB | Original quant method, 5-bit. Higher accuracy, higher resource usage and slower inference. |
+| [llama-2-13b.ggmlv3.q5_K_S.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q5_K_S.bin) | q5_K_S | 5 | 8.97 GB| 11.47 GB | New k-quant method. Uses GGML_TYPE_Q5_K for all tensors |
+| [llama-2-13b.ggmlv3.q5_K_M.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q5_K_M.bin) | q5_K_M | 5 | 9.23 GB| 11.73 GB | New k-quant method. Uses GGML_TYPE_Q6_K for half of the attention.wv and feed_forward.w2 tensors, else GGML_TYPE_Q5_K |
+| [llama-2-13b.ggmlv3.q5_1.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q5_1.bin) | q5_1 | 5 | 9.76 GB| 12.26 GB | Original quant method, 5-bit. Even higher accuracy, resource usage and slower inference. |
+| [llama-2-13b.ggmlv3.q6_K.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q6_K.bin) | q6_K | 6 | 10.68 GB| 13.18 GB | New k-quant method. Uses GGML_TYPE_Q8_K for all tensors - 6-bit quantization |
+| [llama-2-13b.ggmlv3.q8_0.bin](https://huggingface.co/TheBloke/Llama-2-13B-GGML/blob/main/llama-2-13b.ggmlv3.q8_0.bin) | q8_0 | 8 | 13.83 GB| 16.33 GB | Original quant method, 8-bit. Almost indistinguishable from float16. High resource use and slow. Not recommended for most users. |
 
 **Note**: the above RAM figures assume no GPU offloading. If layers are offloaded to the GPU, this will reduce RAM usage and use VRAM instead.
 
 ## How to run in `llama.cpp`
 
-I use the following command line; adjust for your tastes and needs:
+Make sure you are using `llama.cpp` from commit [dadbed99e65252d79f81101a392d0d6497b86caa](https://github.com/ggerganov/llama.cpp/commit/dadbed99e65252d79f81101a392d0d6497b86caa) or earlier.
+
+For compatibility with latest llama.cpp, please use GGUF files instead.
 
 ```
-./main -t 10 -ngl 32 -m llama-2-13b.ggmlv3.q4_0.bin --color -c 2048 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "### Instruction: Write a story about llamas\n### Response:"
+./main -t 10 -ngl 32 -m llama-2-13b.ggmlv3.q4_K_M.bin --color -c 2048 --temp 0.7 --repeat_penalty 1.1 -n -1 -p "Write a story about llamas"
 ```
 Change `-t 10` to the number of physical CPU cores you have. For example if your system has 8 cores/16 threads, use `-t 8`.
 
 Change `-ngl 32` to the number of layers to offload to GPU. Remove it if you don't have GPU acceleration.
 
+Change `-c 2048` to the desired sequence length for this model. For example, `-c 4096` for a Llama 2 model.  For models that use RoPE, add `--rope-freq-base 10000 --rope-freq-scale 0.5` for doubled context, or `--rope-freq-base 10000 --rope-freq-scale 0.25` for 4x context.
+
 If you want to have a chat-style conversation, replace the `-p <PROMPT>` argument with `-i -ins`
+
+For other parameters and how to use them, please refer to [the llama.cpp documentation](https://github.com/ggerganov/llama.cpp/blob/master/examples/main/README.md)
 
 ## How to run in `text-generation-webui`
 
-Further instructions here: [text-generation-webui/docs/llama.cpp-models.md](https://github.com/oobabooga/text-generation-webui/blob/main/docs/llama.cpp-models.md).
+Further instructions here: [text-generation-webui/docs/llama.cpp.md](https://github.com/oobabooga/text-generation-webui/blob/main/docs/llama.cpp.md).
 
 <!-- footer start -->
+<!-- 200823 -->
 ## Discord
 
 For further support, and discussions on these models and AI in general, join us at:
@@ -137,11 +163,14 @@ Donaters will get priority support on any and all AI/LLM/model questions and req
 * Patreon: https://patreon.com/TheBlokeAI
 * Ko-Fi: https://ko-fi.com/TheBlokeAI
 
-**Special thanks to**: Luke from CarbonQuill, Aemon Algiz.
+**Special thanks to**: Aemon Algiz.
 
-**Patreon special mentions**: Space Cruiser, Nikolai Manek, Sam, Chris McCloskey, Rishabh Srivastava, Kalila, Spiking Neurons AB, Khalefa Al-Ahmad, WelcomeToTheClub, Chadd, Lone Striker, Viktor Bowallius, Edmond Seymore, Ai Maven, Chris Smitley, Dave, Alexandros Triantafyllidis, Luke @flexchar, Elle, ya boyyy, Talal Aujan, Alex , Jonathan Leane, Deep Realms, Randy H, subjectnull, Preetika Verma, Joseph William Delisle, Michael Levine, chris gileta, K, Oscar Rangel, LangChain4j, Trenton Dambrowitz, Eugene Pentland, Johann-Peter Hartmann, Femi Adebogun, Illia Dulskyi, senxiiz, Daniel P. Andersen, Sean Connelly, Artur Olbinski, RoA, Mano Prime, Derek Yates, Raven Klaugh, David Flickinger, Willem Michiel, Pieter, Willian Hasse, vamX, Luke Pendergrass, webtim, Ghost , Rainer Wilmers, Nathan LeClaire, Will Dee, Cory Kujawski, John Detwiler, Fred von Graf, biorpg, Iucharbius , Imad Khwaja, Pierre Kircher, terasurfer , Asp the Wyvern, John Villwock, theTransient, zynix , Gabriel Tamborski, Fen Risland, Gabriel Puliatti, Matthew Berman, Pyrater, SuperWojo, Stephen Murray, Karl Bernard, Ajan Kanaga, Greatston Gnanesh, Junyu Yang.
+**Patreon special mentions**: Russ Johnson, J, alfie_i, Alex, NimbleBox.ai, Chadd, Mandus, Nikolai Manek, Ken Nordquist, ya boyyy, Illia Dulskyi, Viktor Bowallius, vamX, Iucharbius, zynix, Magnesian, Clay Pascal, Pierre Kircher, Enrico Ros, Tony Hughes, Elle, Andrey, knownsqashed, Deep Realms, Jerry Meng, Lone Striker, Derek Yates, Pyrater, Mesiah Bishop, James Bentley, Femi Adebogun, Brandon Frisco, SuperWojo, Alps Aficionado, Michael Dempsey, Vitor Caleffi, Will Dee, Edmond Seymore, usrbinkat, LangChain4j, Kacper Wikieł, Luke Pendergrass, John Detwiler, theTransient, Nathan LeClaire, Tiffany J. Kim, biorpg, Eugene Pentland, Stanislav Ovsiannikov, Fred von Graf, terasurfer, Kalila, Dan Guido, Nitin Borwankar, 阿明, Ai Maven, John Villwock, Gabriel Puliatti, Stephen Murray, Asp the Wyvern, danny, Chris Smitley, ReadyPlayerEmma, S_X, Daniel P. Andersen, Olakabola, Jeffrey Morgan, Imad Khwaja, Caitlyn Gatomon, webtim, Alicia Loh, Trenton Dambrowitz, Swaroop Kallakuri, Erik Bjäreholt, Leonard Tan, Spiking Neurons AB, Luke @flexchar, Ajan Kanaga, Thomas Belote, Deo Leter, RoA, Willem Michiel, transmissions 11, subjectnull, Matthew Berman, Joseph William Delisle, David Ziegler, Michael Davis, Johann-Peter Hartmann, Talal Aujan, senxiiz, Artur Olbinski, Rainer Wilmers, Spencer Kim, Fen Risland, Cap'n Zoog, Rishabh Srivastava, Michael Levine, Geoffrey Montalvo, Sean Connelly, Alexandros Triantafyllidis, Pieter, Gabriel Tamborski, Sam, Subspace Studios, Junyu Yang, Pedro Madruga, Vadim, Cory Kujawski, K, Raven Klaugh, Randy H, Mano Prime, Sebastain Graf, Space Cruiser
+
 
 Thank you to all my generous patrons and donaters!
+
+And thank you again to a16z for their generous grant.
 
 <!-- footer end -->
 
@@ -179,6 +208,8 @@ Meta developed and publicly released the Llama 2 family of large language models
 **Status** This is a static model trained on an offline dataset. Future versions of the tuned models will be released as we improve model safety with community feedback.
 
 **License** A custom commercial license is available at: [https://ai.meta.com/resources/models-and-libraries/llama-downloads/](https://ai.meta.com/resources/models-and-libraries/llama-downloads/)
+
+**Research Paper** ["Llama-2: Open Foundation and Fine-tuned Chat Models"](arxiv.org/abs/2307.09288)
 
 ## Intended Use
 **Intended Use Cases** Llama 2 is intended for commercial and research use in English. Tuned models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks.
