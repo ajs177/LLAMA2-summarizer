@@ -1,20 +1,21 @@
 ---
-inference: false
 language:
 - en
 license: llama2
-model_creator: Meta
-model_link: https://huggingface.co/meta-llama/Llama-2-13b-hf
-model_name: Llama 2 13B
-model_type: llama
-pipeline_tag: text-generation
-quantized_by: TheBloke
 tags:
 - facebook
 - meta
 - pytorch
 - llama
 - llama-2
+model_name: Llama 2 13B
+inference: false
+model_creator: Meta
+model_link: https://huggingface.co/meta-llama/Llama-2-13b-hf
+model_type: llama
+pipeline_tag: text-generation
+quantized_by: TheBloke
+base_model: meta-llama/Llama-2-13b-hf
 ---
 
 <!-- header start -->
