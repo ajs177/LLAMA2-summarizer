@@ -20,7 +20,7 @@ def chunks_and_document(txt):
 def load_llm():
     callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  # Instancia del callback con un manejador de salida de texto en tiempo real
     llm = CTransformers(
-       model='llama-2-7b-chat.ggmlv3.q4_0.bin',  # Reemplaza con la ruta local al modelo Llama 2
+       model='llama-2-13b.ggmlv3.q2_K.bin',  # Reemplaza con la ruta local al modelo Llama 2
        model_type="llama",
        max_new_tokens=512,
        temperature=0.5
